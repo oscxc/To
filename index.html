@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To - 官网</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family: Verdana,Tahoma,Consolas,'Microsoft Yahei';
+            background-color: #c8c8c8;
+        }
+        ::selection {
+            background:#22CBEA;
+            color:#fff;
+        }
+        ::-moz-selection {
+            background:#22CBEA;
+            color:#fff;
+        }
+        #left{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            bottom: 20px;
+            width: 460px;
+            background-color: #603f3f;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px #888;
+            overflow: hidden;
+        }
+        #right{
+            position: absolute;
+            top: 20px;
+            left: 500px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #363636;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px #888;
+            overflow: hidden;
+        }
+        .bg{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 460px;
+            height: 100%;
+            background-image: url("docs/images/To.png");
+            background-size:150px 150px;
+            opacity: .11;
+        }
+        .title{
+            height: 200px;
+            line-height: 200px;
+            font-size: 180px;
+            text-align: center;
+            color:#fc556d;
+        }
+        .subtitle{
+            font-size: 25px;
+            color:#fc556d;
+            padding: 60px 40px 20px 40px;
+            line-height: 40px;
+            opacity: 0.92;
+        }
+        .tag{
+            margin-top: 60px;
+            font-size: 25px;
+            color:#fc556d;
+            text-align: center;
+            opacity: 0.92;
+        }
+        .panel{
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #start{
+            position: relative;
+            left:80px;
+            background-color: #fc556d;
+            width: 300px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        #start:hover{
+            transform: translate(-1px,-1px);
+            box-shadow: 1px 1px 3px #888;
+        }
+        #start > div{
+            position: absolute;
+            top:0;
+            left:-40px;
+            width: 30px;
+            height: 60px;
+            transform: skewX(-20deg);
+            background-color: white;
+            transition: left .5s;
+            opacity: .3;
+        }
+        #start > span{
+            position: relative;
+            z-index: 1;
+        }
+        #start:hover > div{
+            left: 340px;
+            transition: left .5s;
+        }
+
+        .block{
+            /*margin-bottom: 20px;*/
+        }
+        .block>div:first-child{
+            position: relative;
+            font-size: 30px;
+            height: 50px;
+            line-height: 50px;
+            color: #fc556d;
+            background-color: #603f3f;
+            padding-left: 30px;
+        }
+        .tit{
+            position:relative;
+            z-index: 1;
+        }
+        .tit>span{
+            color: #fc556d;
+        }
+        .bgp{
+            position: absolute;
+            top:0;
+            width: 100%;
+            height: 50px;
+            background-image: url("docs/images/To.png");
+            background-size:50px;
+            opacity: .11;
+        }
+        .block>div:last-child{
+            padding: 25px;
+            line-height: 40px;
+            font-size: 20px;
+            color: #22CBEA;
+        }
+        .keywords>span{
+            margin: 0 20px 0 0;
+            white-space: nowrap;
+        }
+        @media screen and (max-height: 900px) {
+            .block>div:last-child{
+                padding: 20px;
+                line-height: 30px;
+                font-size: 18px;
+            }
+        }
+        @media screen and (max-height: 760px) {
+            .block>div:last-child{
+                padding: 18px;
+                line-height: 25px;
+                font-size: 16px;
+            }
+            .tag{
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="left">
+    <div class="bg"></div>
+    <div class="title">To</div>
+    <div class="subtitle">一套自由、先进、开放、免费的单页应用思想、设计模式、开发方式、工程化规范、脚手架</div>
+    <div class="tag">前端框架终结者</div>
+    <div class="tag">为何你没有选择</div>
+    <div class="panel">
+        <div id="start"><span>进入文档</span><div></div></div>
+    </div>
+</div>
+<div id="right">
+    <div class="block">
+        <div><span class="tit"><span>To</span>的目标</span><div class="bgp"></div></div>
+        <div>解放所有Web前端开发者，改变世界！</div>
+    </div>
+    <div class="block">
+        <div><span class="tit"><span>To</span>的核心理念</span><div class="bgp"></div></div>
+        <div>技术用来解决问题，不该制造问题，大道至简！</div>
+    </div>
+    <div class="block">
+        <div><span class="tit"><span>To</span>的特点</span><div class="bgp"></div></div>
+        <div class="keywords">
+            <span style="color: #B1F996;">灵活自由</span>
+            <span style="color: #F99282;">不怕复杂需求</span>
+            <span style="color: #FA785A;">完全可控</span>
+            <span style="color: #D74B5E;">原理易掌握</span>
+            <span style="color: #90A39C;">CommonJS模块化</span>
+            <span style="color: #FD9439;">组件化</span>
+            <span style="color: #A59F88;">高内聚低耦合</span>
+            <span style="color: #E472EE;">技术栈极简</span>
+            <span style="color: #4DFCF7;">函数式编程</span>
+            <span style="color: #E3FB7A;">方便协作高效开发</span>
+            <span style="color: #F989A4;">易调试</span>
+            <span style="color: #D680C9;">面向程序员</span>
+            <span style="color: #EAD8E1;">完美兼容jQuery及其插件</span>
+            <span style="color: #677AF9;">门槛稍高</span>
+        </div>
+    </div>
+    <div class="block">
+        <div><span class="tit">学习To之前</span><div class="bgp"></div></div>
+        <div>你应该具备较好的JavaScript基础，精通CommonJS原理，并且掌握如何使用webpack将符合CommonJS规范的模块打包</div>
+    </div>
+    <div class="block">
+        <div><span class="tit">使用To之后</span><div class="bgp"></div></div>
+        <div>你在社区可能是在寻找一个适合你的组件而不会像使用其他框架那样提问各种由框架本身产生的问题</div>
+    </div>
+</div>
+
+<script>
+    function $(s) {
+        return document.querySelector(s)
+    }
+    $('#start').onclick = function () {
+        window.open('http://www.baidu.com')
+    }
+</script>
+</body>
+</html>

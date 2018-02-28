@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To - 一套自由、先进的单页应用思想、设计模式、工程化规范、脚手架</title>
+    <script src="../tools/to.js"></script>
+</head>
+<body>
+<script>
+    var $ = window.To
+
+    var d1 = $.elVal('div','d1')
+    var i1 = $.elValAttr('input','i1',{type:'text'})
+    var d2 = $.elValEvent('div','d2',{
+        type:'click',
+        handle:function () {
+            $([d2,d1]).val(['d35555555','a'])
+            console.log($([d1,d2,i1]).val())
+        }
+    })
+
+//    To(document.body).insert(d1)
+//    To(d2).insert(d1)
+    $(document.body).render([d1,d2])
+    $(document.body).render(i1,true)
+
+    $([d1,d2]).W(100).H(50)
+
+    $.log($([d1,d2]).css('width'))
+//    $(document.body).render([d1,{
+//        el:d2,
+//        childs:i1
+//    }])
+</script>
+</body>
+</html>
